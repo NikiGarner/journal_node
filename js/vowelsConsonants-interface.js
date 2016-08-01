@@ -6,7 +6,10 @@ $(document).ready(function() {
     var title = $("#title").val();
     var body = $("#body").val();
     var entry = new Entry(title, body);
-    var answer = entry.vowelsConsonants(body);
-    $('#solution').prepend("<p>" + answer + "</p>");
+    var vowelsConsonants = entry.vowelsConsonants(body);
+    var numberOfWords = entry.numberOfWords(body);
+    var preview = entry.preview(body);
+    $('#solution').prepend("<p>" + vowelsConsonants + "</p> <br> <p>" + numberOfWords + "</p>");
+    $('#solution').append("<p>Preview: " + preview + "</p>");
   });
 });
